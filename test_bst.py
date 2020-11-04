@@ -254,20 +254,20 @@ class TestBinarySearchTree(unittest.TestCase):
         bst.insert(bstRight)
         self.assertEqual(bstRight, bst.search(7))
 
-    # def test_delete_two_nonexistent(self):
-    #     """
-    #     Deleting a node with a key that does not exist does not modify the tree
-    #     and returns the root node of the tree.
-    #     """
-    #     bst = BinarySearchTree(5)
-    #     bstLeft = BinarySearchTree(3)
-    #     bst.insert(bstLeft)
-    #     bstRight = BinarySearchTree(7)
-    #     bst.insert(bstRight)
-    #     self.assertEqual(bst, bst.delete(-999))
-    #     self.assertEqual(5, bst.key)
-    #     self.assertEqual(3, bst.left.key)
-    #     self.assertEqual(7, bst.right.key)
+    def test_delete_two_nonexistent(self):
+        """
+        Deleting a node with a key that does not exist does not modify the tree
+        and returns the root node of the tree.
+        """
+        bst = BinarySearchTree(5)
+        bstLeft = BinarySearchTree(3)
+        bst.insert(bstLeft)
+        bstRight = BinarySearchTree(7)
+        bst.insert(bstRight)
+        self.assertEqual(bst, bst.delete(-999))
+        self.assertEqual(5, bst.key)
+        self.assertEqual(3, bst.left.key)
+        self.assertEqual(7, bst.right.key)
 
     # def test_delete_two_left_leaf(self):
     #     """
