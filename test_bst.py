@@ -269,24 +269,24 @@ class TestBinarySearchTree(unittest.TestCase):
         self.assertEqual(3, bst.left.key)
         self.assertEqual(7, bst.right.key)
 
-    # def test_delete_two_left_leaf(self):
-    #     """
-    #     Deleting the left child of a two-level tree removes the left child and
-    #     returns the root node.
-    #       5            5
-    #      / \     =>     \
-    #     3   7            7
-    #     Hint: Consult the BST rules. Time to improve your `delete` method... a little.
-    #     """
-    #     bst = BinarySearchTree(5)
-    #     bstLeft = BinarySearchTree(3)
-    #     bst.insert(bstLeft)
-    #     bstRight = BinarySearchTree(7)
-    #     bst.insert(bstRight)
-    #     self.assertEqual(bst, bst.delete(3))
-    #     self.assertIsNone(bst.left)
-    #     self.assertEqual(5, bst.key)
-    #     self.assertEqual(7, bst.right.key)
+    def test_delete_two_left_leaf(self):
+        """
+        Deleting the left child of a two-level tree removes the left child and
+        returns the root node.
+          5            5
+         / \     =>     \
+        3   7            7
+        Hint: Consult the BST rules. Time to improve your `delete` method... a little.
+        """
+        bst = BinarySearchTree(5)
+        bstLeft = BinarySearchTree(3)
+        bst.insert(bstLeft)
+        bstRight = BinarySearchTree(7)
+        bst.insert(bstRight)
+        self.assertEqual(bst, bst.delete(3))
+        self.assertIsNone(bst.left)
+        self.assertEqual(5, bst.key)
+        self.assertEqual(7, bst.right.key)
 
     # def test_delete_two_right_leaf(self):
     #     """
