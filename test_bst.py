@@ -640,16 +640,16 @@ class TestBinarySearchTree(unittest.TestCase):
         bst = BinarySearchTree(10)
         self.assertEqual(bst, bst.minimum())
 
-    # def test_find_minimum_two(self):
-    #     """
-    #     A tree's 'minimum' node is the one with the smallest key.
-    #     """
-    #     bst = BinarySearchTree(10)
-    #     left = BinarySearchTree(5)
-    #     right = BinarySearchTree(15)
-    #     bst.left = left
-    #     bst.right = right
-    #     self.assertEqual(left, bst.minimum())
+    def test_find_minimum_two(self):
+        """
+        A tree's 'minimum' node is the one with the smallest key.
+        """
+        bst = BinarySearchTree(10)
+        left = BinarySearchTree(5)
+        right = BinarySearchTree(15)
+        bst.left = left
+        bst.right = right
+        self.assertEqual(left, bst.minimum())
 
     # def test_find_minimum_three(self):
     #     """
