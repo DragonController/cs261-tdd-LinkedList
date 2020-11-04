@@ -20,3 +20,6 @@ class BinarySearchTree:
         if self.key < node.key:
             self.right = node
             node.parent = self
+
+    def search(self, key):
+        return None

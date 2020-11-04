@@ -85,12 +85,12 @@ class TestBinarySearchTree(unittest.TestCase):
         bst.insert(child)
         self.assertEqual(child, bst.right)
 
-    # def test_search_single_none(self):
-    #     """
-    #     Searching a single-level tree for a key that doesn't exist returns None.
-    #     """
-    #     bst = BinarySearchTree(5)
-    #     self.assertIsNone(bst.search(-999))
+    def test_search_single_none(self):
+        """
+        Searching a single-level tree for a key that doesn't exist returns None.
+        """
+        bst = BinarySearchTree(5)
+        self.assertIsNone(bst.search(-999))
 
     # def test_search_single_one(self):
     #     """
