@@ -434,24 +434,24 @@ class TestBinarySearchTree(unittest.TestCase):
         self.assertEqual(child, bst.left.right.left)
         self.assertEqual(bst.left.right, child.parent)
 
-    # def test_insert_three_larger_left_right_leaf(self):
-    #     """
-    #     Inserting a node with a key that is greater than the 'inner left' leaf node's
-    #     key (but less than the root) appends the new node as the 'inner left' leaf's
-    #     right child.
-    #          10                10
-    #        /    \            /    \
-    #       5      15    =>   5      15
-    #      / \    /  \       / \    /  \
-    #     2   7  12   17    2   7  12   17
-    #                            \
-    #                             8
-    #     """
-    #     bst = three_level_tree()
-    #     child = BinarySearchTree(8)
-    #     bst.insert(child)
-    #     self.assertEqual(child, bst.left.right.right)
-    #     self.assertEqual(bst.left.right, child.parent)
+    def test_insert_three_larger_left_right_leaf(self):
+        """
+        Inserting a node with a key that is greater than the 'inner left' leaf node's
+        key (but less than the root) appends the new node as the 'inner left' leaf's
+        right child.
+             10                10
+           /    \            /    \
+          5      15    =>   5      15
+         / \    /  \       / \    /  \
+        2   7  12   17    2   7  12   17
+                               \
+                                8
+        """
+        bst = three_level_tree()
+        child = BinarySearchTree(8)
+        bst.insert(child)
+        self.assertEqual(child, bst.left.right.right)
+        self.assertEqual(bst.left.right, child.parent)
 
     # def test_insert_three_smaller_right_left_leaf(self):
     #     """
