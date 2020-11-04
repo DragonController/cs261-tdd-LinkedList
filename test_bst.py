@@ -242,17 +242,17 @@ class TestBinarySearchTree(unittest.TestCase):
         bst.insert(bstRight)
         self.assertEqual(bstLeft, bst.search(3))
 
-    # def test_search_two_right(self):
-    #     """
-    #     Searching a two-level tree for a key that exists in the right subtree
-    #     returns that right node / subtree.
-    #     """
-    #     bst = BinarySearchTree(5)
-    #     bstLeft = BinarySearchTree(3)
-    #     bst.insert(bstLeft)
-    #     bstRight = BinarySearchTree(7)
-    #     bst.insert(bstRight)
-    #     self.assertEqual(bstRight, bst.search(7))
+    def test_search_two_right(self):
+        """
+        Searching a two-level tree for a key that exists in the right subtree
+        returns that right node / subtree.
+        """
+        bst = BinarySearchTree(5)
+        bstLeft = BinarySearchTree(3)
+        bst.insert(bstLeft)
+        bstRight = BinarySearchTree(7)
+        bst.insert(bstRight)
+        self.assertEqual(bstRight, bst.search(7))
 
     # def test_delete_two_nonexistent(self):
     #     """
