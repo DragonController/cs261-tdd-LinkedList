@@ -307,22 +307,22 @@ class TestBinarySearchTree(unittest.TestCase):
         self.assertEqual(5, bst.key)
         self.assertEqual(3, bst.left.key)
 
-    # def test_delete_two_root_with_left(self):
-    #     """
-    #     Deleting the root of a two-level tree that has only a left child makes
-    #     the left child the new root, and `delete` returns it.
-    #       5
-    #      /     =>  3
-    #     3
-    #     Hint: Small steps of a little nested logic.
-    #     """
-    #     bst = BinarySearchTree(5)
-    #     bstLeft = BinarySearchTree(3)
-    #     bst.insert(bstLeft)
-    #     bst = bst.delete(5)
-    #     self.assertEqual(bstLeft, bst)
-    #     self.assertEqual(3, bst.key)
-    #     self.assertTrue(bst.is_leaf())
+    def test_delete_two_root_with_left(self):
+        """
+        Deleting the root of a two-level tree that has only a left child makes
+        the left child the new root, and `delete` returns it.
+          5
+         /     =>  3
+        3
+        Hint: Small steps of a little nested logic.
+        """
+        bst = BinarySearchTree(5)
+        bstLeft = BinarySearchTree(3)
+        bst.insert(bstLeft)
+        bst = bst.delete(5)
+        self.assertEqual(bstLeft, bst)
+        self.assertEqual(3, bst.key)
+        self.assertTrue(bst.is_leaf())
 
     # def test_delete_two_root_with_right(self):
     #     """
