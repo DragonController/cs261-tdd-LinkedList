@@ -951,18 +951,18 @@ class TestBinarySearchTree(unittest.TestCase):
         bst = three_level_tree()
         self.assertEqual([2, 5, 7, 10, 12, 15, 17], bst.keys('in'))
 
-    # def test_three_post_order(self):
-    #     """
-    #     The post-order traversal of a three-level tree is a list containing the keys
-    #     in 'post-order'.
-    #          10
-    #        /    \
-    #       5      15      => [2, 7, 5, 12, 17, 15, 10]
-    #      / \    /  \
-    #     2   7  12   17
-    #     """
-    #     bst = three_level_tree()
-    #     self.assertEqual([2, 7, 5, 12, 17, 15, 10], bst.keys('post'))
+    def test_three_post_order(self):
+        """
+        The post-order traversal of a three-level tree is a list containing the keys
+        in 'post-order'.
+             10
+           /    \
+          5      15      => [2, 7, 5, 12, 17, 15, 10]
+         / \    /  \
+        2   7  12   17
+        """
+        bst = three_level_tree()
+        self.assertEqual([2, 7, 5, 12, 17, 15, 10], bst.keys('post'))
 
 
 def three_level_tree():
