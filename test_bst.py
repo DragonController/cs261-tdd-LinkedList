@@ -107,12 +107,12 @@ class TestBinarySearchTree(unittest.TestCase):
         bst = BinarySearchTree(5)
         self.assertEqual(bst, bst.delete(-999))
 
-    # def test_delete_single(self):
-    #     """
-    #     Deleting the node of a single-level tree returns None.
-    #     """
-    #     bst = BinarySearchTree(5)
-    #     self.assertIsNone(bst.delete(5))
+    def test_delete_single(self):
+        """
+        Deleting the node of a single-level tree returns None.
+        """
+        bst = BinarySearchTree(5)
+        self.assertIsNone(bst.delete(5))
 
     # """
     # Toddler, two-level trees. (Depth of one.)
