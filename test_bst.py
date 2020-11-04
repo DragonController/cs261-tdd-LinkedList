@@ -364,36 +364,36 @@ class TestBinarySearchTree(unittest.TestCase):
     # Hint: Don't just curse - be recursive.
     # """
 
-    # def test_insert_three_smaller_leftmost_leaf(self):
-    #     """
-    #     Inserting a node with a key that is less than the leftmost leaf node's
-    #     key appends the new node as the leftmost leaf's left child.
-    #          10                10
-    #        /    \            /    \
-    #       5      15    =>   5      15
-    #      / \    /  \       / \    /  \
-    #     2   7  12   17    2   7  12   17
-    #                      /
-    #                     1
-    #     Hint: Recursion, if you didn't already, makes this easy.
-    #     """
-    #     bst = BinarySearchTree(10)
-    #     node_5 = BinarySearchTree(5)
-    #     bst.insert(node_5)
-    #     node_15 = BinarySearchTree(15)
-    #     bst.insert(node_15)
-    #     node_2 = BinarySearchTree(2)
-    #     bst.insert(node_2)
-    #     node_7 = BinarySearchTree(7)
-    #     bst.insert(node_7)
-    #     node_12 = BinarySearchTree(12)
-    #     bst.insert(node_12)
-    #     node_17 = BinarySearchTree(17)
-    #     bst.insert(node_17)
-    #     child = BinarySearchTree(1)
-    #     bst.insert(child)
-    #     self.assertEqual(child, bst.left.left.left)
-    #     self.assertEqual(bst.left.left, child.parent)
+    def test_insert_three_smaller_leftmost_leaf(self):
+        """
+        Inserting a node with a key that is less than the leftmost leaf node's
+        key appends the new node as the leftmost leaf's left child.
+             10                10
+           /    \            /    \
+          5      15    =>   5      15
+         / \    /  \       / \    /  \
+        2   7  12   17    2   7  12   17
+                         /
+                        1
+        Hint: Recursion, if you didn't already, makes this easy.
+        """
+        bst = BinarySearchTree(10)
+        node_5 = BinarySearchTree(5)
+        bst.insert(node_5)
+        node_15 = BinarySearchTree(15)
+        bst.insert(node_15)
+        node_2 = BinarySearchTree(2)
+        bst.insert(node_2)
+        node_7 = BinarySearchTree(7)
+        bst.insert(node_7)
+        node_12 = BinarySearchTree(12)
+        bst.insert(node_12)
+        node_17 = BinarySearchTree(17)
+        bst.insert(node_17)
+        child = BinarySearchTree(1)
+        bst.insert(child)
+        self.assertEqual(child, bst.left.left.left)
+        self.assertEqual(bst.left.left, child.parent)
 
 
     # def test_insert_three_larger_leftmost_leaf(self):
