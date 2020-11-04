@@ -38,19 +38,24 @@ class BinarySearchTree:
 
     def delete(self, key):
         if self.key == key:
-            if self.right != None:
-                if self.left != None:
+            if self.parent != None:
+                if self.parent.left == self:
+                    self.parent.left = None
+                if self.parent.right == self:
+                    self.parent.right = None
+            if self.has_right_child():
+                if self.has_left_child():
                     self.right.insert(self.left)
+                self.right.parent = None
                 return self.right
-            if self.left != None:
+            if self.has_left_child():
+                self.left.parent = None
                 return self.left
             return None
-        if self.left != None and self.left.key == key:
-            self.left = None
-            return self
-        if self.right != None and self.right.key == key:
-            self.right = None
-            return self
+        if self.key > key and self.has_left_child():
+            self.left.delete(key)
+        if self.key < key and self.has_right_child():
+            self.right.delete(key)
         return self
 
     def is_leaf(self):

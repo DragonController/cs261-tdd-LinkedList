@@ -663,25 +663,25 @@ class TestBinarySearchTree(unittest.TestCase):
     # using those new convenience methods. One change at a time, keeping the
     # tests passing.
 
-    # def test_delete_three_nonexistent(self):
-    #     """
-    #     Deleting a node with a key that does not exist does not modify the tree
-    #     and returns the root node of a three-level tree.
-    #          10                   10
-    #        /    \               /    \
-    #       5      15      =>    5      15
-    #      / \    /  \          / \    /  \
-    #     2   7  12   17       2   7  12   17
-    #     """
-    #     bst = three_level_tree()
-    #     self.assertEqual(bst, bst.delete(-999))
-    #     self.assertEqual(10, bst.key)
-    #     self.assertEqual(5, bst.left.key)
-    #     self.assertEqual(15, bst.right.key)
-    #     self.assertEqual(2, bst.left.left.key)
-    #     self.assertEqual(7, bst.left.right.key)
-    #     self.assertEqual(12, bst.right.left.key)
-    #     self.assertEqual(17, bst.right.right.key)
+    def test_delete_three_nonexistent(self):
+        """
+        Deleting a node with a key that does not exist does not modify the tree
+        and returns the root node of a three-level tree.
+             10                   10
+           /    \               /    \
+          5      15      =>    5      15
+         / \    /  \          / \    /  \
+        2   7  12   17       2   7  12   17
+        """
+        bst = three_level_tree()
+        self.assertEqual(bst, bst.delete(-999))
+        self.assertEqual(10, bst.key)
+        self.assertEqual(5, bst.left.key)
+        self.assertEqual(15, bst.right.key)
+        self.assertEqual(2, bst.left.left.key)
+        self.assertEqual(7, bst.left.right.key)
+        self.assertEqual(12, bst.right.left.key)
+        self.assertEqual(17, bst.right.right.key)
 
     # def test_delete_three_leftmost_leaf(self):
     #     """
