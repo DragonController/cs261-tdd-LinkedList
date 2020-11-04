@@ -705,25 +705,25 @@ class TestBinarySearchTree(unittest.TestCase):
         self.assertEqual(12, bst.right.left.key)
         self.assertEqual(17, bst.right.right.key)
 
-    # def test_delete_three_inner_left_leaf(self):
-    #     """
-    #     Deleting the 'inner left' leaf of a three-level tree removes the inner
-    #     left leaf and returns the root node of the three-level tree.
-    #          10                   10
-    #        /    \               /    \
-    #       5      15      =>    5      15
-    #      / \    /  \          /      /  \
-    #     2   7  12   17       2      12   17
-    #     """
-    #     bst = three_level_tree()
-    #     self.assertEqual(bst, bst.delete(7))
-    #     self.assertIsNone(bst.left.right)
-    #     self.assertEqual(10, bst.key)
-    #     self.assertEqual(5, bst.left.key)
-    #     self.assertEqual(15, bst.right.key)
-    #     self.assertEqual(2, bst.left.left.key)
-    #     self.assertEqual(12, bst.right.left.key)
-    #     self.assertEqual(17, bst.right.right.key)
+    def test_delete_three_inner_left_leaf(self):
+        """
+        Deleting the 'inner left' leaf of a three-level tree removes the inner
+        left leaf and returns the root node of the three-level tree.
+             10                   10
+           /    \               /    \
+          5      15      =>    5      15
+         / \    /  \          /      /  \
+        2   7  12   17       2      12   17
+        """
+        bst = three_level_tree()
+        self.assertEqual(bst, bst.delete(7))
+        self.assertIsNone(bst.left.right)
+        self.assertEqual(10, bst.key)
+        self.assertEqual(5, bst.left.key)
+        self.assertEqual(15, bst.right.key)
+        self.assertEqual(2, bst.left.left.key)
+        self.assertEqual(12, bst.right.left.key)
+        self.assertEqual(17, bst.right.right.key)
 
     # def test_delete_three_inner_right_leaf(self):
     #     """
