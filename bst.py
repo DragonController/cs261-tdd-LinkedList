@@ -78,4 +78,13 @@ class BinarySearchTree:
         return self
 
     def keys(self, order):
-        return [self.key]
+        keys = []
+        keys.append(self.key)
+        if order == 'pre':
+            if self.has_left_child():
+                for key in self.left.keys('pre'):
+                    keys.append(key)
+            if self.has_right_child():
+                for key in self.right.keys('pre'):
+                    keys.append(key)
+        return keys
