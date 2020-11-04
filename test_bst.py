@@ -50,18 +50,18 @@ class TestBinarySearchTree(unittest.TestCase):
     # Cute, single-level trees. (Depth of zero.)
     # """
 
-    # def test_insert_single_smaller(self):
-    #     """
-    #     Inserting a node into a single-level tree appends the new node as the
-    #     left child, when the new node key is less than the parent's key.
-    #     (A new node whose key is <= parent key becomes the left child.)
-    #     and updates the child's parent
-    #     """
-    #     bst = BinarySearchTree(5)
-    #     child = BinarySearchTree(1)
-    #     bst.insert(child)
-    #     self.assertEqual(child, bst.left)
-    #     self.assertEqual(bst, child.parent)
+    def test_insert_single_smaller(self):
+        """
+        Inserting a node into a single-level tree appends the new node as the
+        left child, when the new node key is less than the parent's key.
+        (A new node whose key is <= parent key becomes the left child.)
+        and updates the child's parent
+        """
+        bst = BinarySearchTree(5)
+        child = BinarySearchTree(1)
+        bst.insert(child)
+        self.assertEqual(child, bst.left)
+        self.assertEqual(bst, child.parent)
 
     # def test_insert_single_equal(self):
     #     """
