@@ -651,13 +651,13 @@ class TestBinarySearchTree(unittest.TestCase):
         bst.right = right
         self.assertEqual(left, bst.minimum())
 
-    # def test_find_minimum_three(self):
-    #     """
-    #     A tree's 'minimum' node is the one with the smallest key.
-    #     Hint: The recipe is simple. And recursive.
-    #     """
-    #     bst = three_level_tree()
-    #     self.assertEqual(bst.left.left, bst.minimum())
+    def test_find_minimum_three(self):
+        """
+        A tree's 'minimum' node is the one with the smallest key.
+        Hint: The recipe is simple. And recursive.
+        """
+        bst = three_level_tree()
+        self.assertEqual(bst.left.left, bst.minimum())
 
     # If all of your tests are passing, try refactoring your implementation by
     # using those new convenience methods. One change at a time, keeping the
