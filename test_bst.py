@@ -595,13 +595,13 @@ class TestBinarySearchTree(unittest.TestCase):
         bst.left = BinarySearchTree(5)
         self.assertFalse(bst.is_leaf())
 
-    # def test_with_right_child_is_not_leaf(self):
-    #     """
-    #     A node with a right child is not a leaf node.
-    #     """
-    #     bst = BinarySearchTree(10)
-    #     bst.right = BinarySearchTree(15)
-    #     self.assertFalse(bst.is_leaf())
+    def test_with_right_child_is_not_leaf(self):
+        """
+        A node with a right child is not a leaf node.
+        """
+        bst = BinarySearchTree(10)
+        bst.right = BinarySearchTree(15)
+        self.assertFalse(bst.is_leaf())
 
     # def test_has_left_child(self):
     #     """
