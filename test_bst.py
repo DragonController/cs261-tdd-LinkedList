@@ -765,26 +765,26 @@ class TestBinarySearchTree(unittest.TestCase):
         self.assertEqual(7, bst.left.right.key)
         self.assertEqual(12, bst.right.left.key)
 
-    # def test_delete_three_left(self):
-    #     """
-    #     Deleting a node with two children causes the leaf with the smallest key
-    #     in the deleted node's right subtree to take its place; and, delete still
-    #     returns the root of the tree.
-    #          10                   10
-    #        /    \               /    \
-    #       5      15      =>    7      15
-    #      / \    /  \          /      /  \
-    #     2   7  12   17       2      12   17
-    #     """
-    #     bst = three_level_tree()
-    #     self.assertEqual(bst, bst.delete(5))
-    #     self.assertEqual(7, bst.left.key)
-    #     self.assertIsNone(bst.left.right)
-    #     self.assertEqual(10, bst.key)
-    #     self.assertEqual(15, bst.right.key)
-    #     self.assertEqual(2, bst.left.left.key)
-    #     self.assertEqual(12, bst.right.left.key)
-    #     self.assertEqual(17, bst.right.right.key)
+    def test_delete_three_left(self):
+        """
+        Deleting a node with two children causes the leaf with the smallest key
+        in the deleted node's right subtree to take its place; and, delete still
+        returns the root of the tree.
+             10                   10
+           /    \               /    \
+          5      15      =>    7      15
+         / \    /  \          /      /  \
+        2   7  12   17       2      12   17
+        """
+        bst = three_level_tree()
+        self.assertEqual(bst, bst.delete(5))
+        self.assertEqual(7, bst.left.key)
+        self.assertIsNone(bst.left.right)
+        self.assertEqual(10, bst.key)
+        self.assertEqual(15, bst.right.key)
+        self.assertEqual(2, bst.left.left.key)
+        self.assertEqual(12, bst.right.left.key)
+        self.assertEqual(17, bst.right.right.key)
 
     # def test_delete_three_right(self):
     #     """

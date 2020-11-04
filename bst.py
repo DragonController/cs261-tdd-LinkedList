@@ -47,9 +47,13 @@ class BinarySearchTree:
                 if self.has_left_child():
                     self.right.insert(self.left)
                 self.right.parent = None
+                if self.parent != None:
+                    self.parent.insert(self.right)
                 return self.right
             if self.has_left_child():
                 self.left.parent = None
+                if self.parent != None:
+                    self.parent.insert(self.left)
                 return self.left
             return None
         if self.key > key and self.has_left_child():
