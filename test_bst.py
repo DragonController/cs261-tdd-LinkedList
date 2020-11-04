@@ -21,19 +21,19 @@ class TestBinarySearchTree(unittest.TestCase):
         except NameError:
             self.fail("Could not instantiate BinarySearchTree.")
 
-    # def test_initial_attributes(self):
-    #     """
-    #     A BST is a recursive structure. When we refer to an object that "is a BST,"
-    #     we are referring to a root node of a binary search tree.
-    #     Every node has a left child, right child, a parent, and a key.
-    #     A new BST has a left, right, parent, and key that are each None.
-    #     Hint: Define an initializer.
-    #     """
-    #     bst = BinarySearchTree()
-    #     self.assertIsNone(bst.left)
-    #     self.assertIsNone(bst.right)
-    #     self.assertIsNone(bst.key)
-    #     self.assertIsNone(bst.parent)
+    def test_initial_attributes(self):
+        """
+        A BST is a recursive structure. When we refer to an object that "is a BST,"
+        we are referring to a root node of a binary search tree.
+        Every node has a left child, right child, a parent, and a key.
+        A new BST has a left, right, parent, and key that are each None.
+        Hint: Define an initializer.
+        """
+        bst = BinarySearchTree()
+        self.assertIsNone(bst.left)
+        self.assertIsNone(bst.right)
+        self.assertIsNone(bst.key)
+        self.assertIsNone(bst.parent)
 
     # def test_instatiate_with_key(self):
     #     """
