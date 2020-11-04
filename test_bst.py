@@ -35,16 +35,16 @@ class TestBinarySearchTree(unittest.TestCase):
         self.assertIsNone(bst.key)
         self.assertIsNone(bst.parent)
 
-    # def test_instatiate_with_key(self):
-    #     """
-    #     A BST (node) can be instantiated with an initial key.
-    #     When one isn't provided, the key is None.
-    #     Hint: Use Python's 'default arguments' feature.
-    #     """
-    #     bst = BinarySearchTree()
-    #     self.assertIsNone(bst.key)
-    #     bst = BinarySearchTree(42)
-    #     self.assertEqual(42, bst.key)
+    def test_instatiate_with_key(self):
+        """
+        A BST (node) can be instantiated with an initial key.
+        When one isn't provided, the key is None.
+        Hint: Use Python's 'default arguments' feature.
+        """
+        bst = BinarySearchTree()
+        self.assertIsNone(bst.key)
+        bst = BinarySearchTree(42)
+        self.assertEqual(42, bst.key)
 
     # """
     # Cute, single-level trees. (Depth of zero.)
