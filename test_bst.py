@@ -535,13 +535,13 @@ class TestBinarySearchTree(unittest.TestCase):
         bst = three_level_tree()
         self.assertIsNone(bst.search(-999))
 
-    # def test_search_three_root(self):
-    #     """
-    #     Searching a three-level tree for a key that exists in the root returns
-    #     the root.
-    #     """
-    #     bst = three_level_tree()
-    #     self.assertEqual(bst, bst.search(10))
+    def test_search_three_root(self):
+        """
+        Searching a three-level tree for a key that exists in the root returns
+        the root.
+        """
+        bst = three_level_tree()
+        self.assertEqual(bst, bst.search(10))
 
     # def test_search_three_outer_left(self):
     #     """
