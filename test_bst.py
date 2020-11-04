@@ -683,27 +683,27 @@ class TestBinarySearchTree(unittest.TestCase):
         self.assertEqual(12, bst.right.left.key)
         self.assertEqual(17, bst.right.right.key)
 
-    # def test_delete_three_leftmost_leaf(self):
-    #     """
-    #     Deleting the leftmost leaf of a three-level tree removes the leftmost leaf
-    #     and returns the root node of the three-level tree.
-    #          10                   10
-    #        /    \               /    \
-    #       5      15      =>    5      15
-    #      / \    /  \            \    /  \
-    #     2   7  12   17           7  12   17
-    #     Hint: Consult the BST rules. Use paper. Draw pictures, hand-write code.
-    #           Be recursive.
-    #     """
-    #     bst = three_level_tree()
-    #     self.assertEqual(bst, bst.delete(2))
-    #     self.assertIsNone(bst.left.left)
-    #     self.assertEqual(10, bst.key)
-    #     self.assertEqual(5, bst.left.key)
-    #     self.assertEqual(15, bst.right.key)
-    #     self.assertEqual(7, bst.left.right.key)
-    #     self.assertEqual(12, bst.right.left.key)
-    #     self.assertEqual(17, bst.right.right.key)
+    def test_delete_three_leftmost_leaf(self):
+        """
+        Deleting the leftmost leaf of a three-level tree removes the leftmost leaf
+        and returns the root node of the three-level tree.
+             10                   10
+           /    \               /    \
+          5      15      =>    5      15
+         / \    /  \            \    /  \
+        2   7  12   17           7  12   17
+        Hint: Consult the BST rules. Use paper. Draw pictures, hand-write code.
+              Be recursive.
+        """
+        bst = three_level_tree()
+        self.assertEqual(bst, bst.delete(2))
+        self.assertIsNone(bst.left.left)
+        self.assertEqual(10, bst.key)
+        self.assertEqual(5, bst.left.key)
+        self.assertEqual(15, bst.right.key)
+        self.assertEqual(7, bst.left.right.key)
+        self.assertEqual(12, bst.right.left.key)
+        self.assertEqual(17, bst.right.right.key)
 
     # def test_delete_three_inner_left_leaf(self):
     #     """
