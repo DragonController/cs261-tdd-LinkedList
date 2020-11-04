@@ -862,13 +862,13 @@ class TestBinarySearchTree(unittest.TestCase):
     # Traversals
     # """
 
-    # def test_one_pre_order(self):
-    #     """
-    #     The pre-order traversal of a single-node tree is a list containing that
-    #     node's key.
-    #     """
-    #     bst = BinarySearchTree(10)
-    #     self.assertEqual([10], bst.keys('pre'))
+    def test_one_pre_order(self):
+        """
+        The pre-order traversal of a single-node tree is a list containing that
+        node's key.
+        """
+        bst = BinarySearchTree(10)
+        self.assertEqual([10], bst.keys('pre'))
 
     # def test_one_in_order(self):
     #     """

@@ -76,3 +76,6 @@ class BinarySearchTree:
         if self.has_left_child():
             return self.left.minimum()
         return self
+
+    def keys(self, order):
+        return [self.key]
