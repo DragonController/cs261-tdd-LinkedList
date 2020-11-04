@@ -618,13 +618,13 @@ class TestBinarySearchTree(unittest.TestCase):
         bst = BinarySearchTree(10)
         self.assertFalse(bst.has_left_child())
 
-    # def test_has_right_child(self):
-    #     """
-    #     A node with a right child returns True.
-    #     """
-    #     bst = BinarySearchTree(10)
-    #     bst.left = BinarySearchTree(15)
-    #     self.assertTrue(bst.has_left_child())
+    def test_has_right_child(self):
+        """
+        A node with a right child returns True.
+        """
+        bst = BinarySearchTree(10)
+        bst.left = BinarySearchTree(15)
+        self.assertTrue(bst.has_left_child())
 
     # def test_not_has_right_child(self):
     #     """
