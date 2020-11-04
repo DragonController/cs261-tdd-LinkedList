@@ -61,3 +61,8 @@ class BinarySearchTree:
 
     def has_right_child(self):
         return self.right != None
+
+    def minimum(self):
+        if self.has_left_child():
+            return self.left.minimum()
+        return self
