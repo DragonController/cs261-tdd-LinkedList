@@ -79,12 +79,28 @@ class BinarySearchTree:
 
     def keys(self, order):
         keys = []
-        keys.append(self.key)
         if order == 'pre':
+            keys.append(self.key)
             if self.has_left_child():
                 for key in self.left.keys('pre'):
                     keys.append(key)
             if self.has_right_child():
                 for key in self.right.keys('pre'):
                     keys.append(key)
+        if order == 'in':
+            if self.has_left_child():
+                for key in self.left.keys('in'):
+                    keys.append(key)
+            keys.append(self.key)
+            if self.has_right_child():
+                for key in self.right.keys('in'):
+                    keys.append(key)
+        if order == 'post':
+            if self.has_left_child():
+                for key in self.left.keys('post'):
+                    keys.append(key)
+            if self.has_right_child():
+                for key in self.right.keys('post'):
+                    keys.append(key)
+            keys.append(self.key)
         return keys
