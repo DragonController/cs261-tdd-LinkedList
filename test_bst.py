@@ -870,13 +870,13 @@ class TestBinarySearchTree(unittest.TestCase):
         bst = BinarySearchTree(10)
         self.assertEqual([10], bst.keys('pre'))
 
-    # def test_one_in_order(self):
-    #     """
-    #     The in-order traversal of a single-node tree is a list containing that
-    #     node's key.
-    #     """
-    #     bst = BinarySearchTree(5)
-    #     self.assertEqual([5], bst.keys('in'))
+    def test_one_in_order(self):
+        """
+        The in-order traversal of a single-node tree is a list containing that
+        node's key.
+        """
+        bst = BinarySearchTree(5)
+        self.assertEqual([5], bst.keys('in'))
 
     # def test_one_post_order(self):
     #     """
