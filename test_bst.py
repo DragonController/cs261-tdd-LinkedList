@@ -912,18 +912,18 @@ class TestBinarySearchTree(unittest.TestCase):
         bst.right = BinarySearchTree(7)
         self.assertEqual([3, 5, 7], bst.keys('in'))
 
-    # def test_two_post_order(self):
-    #     """
-    #     The post-order traversal of a two-level tree is a list containing the keys
-    #     in 'post-order'.
-    #       5
-    #      / \    => [3, 7, 5]
-    #     3   7
-    #     """
-    #     bst = BinarySearchTree(5)
-    #     bst.left = BinarySearchTree(3)
-    #     bst.right = BinarySearchTree(7)
-    #     self.assertEqual([3, 7, 5], bst.keys('post'))
+    def test_two_post_order(self):
+        """
+        The post-order traversal of a two-level tree is a list containing the keys
+        in 'post-order'.
+          5
+         / \    => [3, 7, 5]
+        3   7
+        """
+        bst = BinarySearchTree(5)
+        bst.left = BinarySearchTree(3)
+        bst.right = BinarySearchTree(7)
+        self.assertEqual([3, 7, 5], bst.keys('post'))
 
     # def test_three_pre_order(self):
     #     """
