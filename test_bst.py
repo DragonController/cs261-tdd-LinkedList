@@ -925,18 +925,18 @@ class TestBinarySearchTree(unittest.TestCase):
         bst.right = BinarySearchTree(7)
         self.assertEqual([3, 7, 5], bst.keys('post'))
 
-    # def test_three_pre_order(self):
-    #     """
-    #     The pre-order traversal of a three-level tree is a list containing the keys
-    #     in 'pre-order'.
-    #          10
-    #        /    \
-    #       5      15      => [10, 5, 2, 7, 15, 12, 17]
-    #      / \    /  \
-    #     2   7  12   17
-    #     """
-    #     bst = three_level_tree()
-    #     self.assertEqual([10, 5, 2, 7, 15, 12, 17], bst.keys('pre'))
+    def test_three_pre_order(self):
+        """
+        The pre-order traversal of a three-level tree is a list containing the keys
+        in 'pre-order'.
+             10
+           /    \
+          5      15      => [10, 5, 2, 7, 15, 12, 17]
+         / \    /  \
+        2   7  12   17
+        """
+        bst = three_level_tree()
+        self.assertEqual([10, 5, 2, 7, 15, 12, 17], bst.keys('pre'))
 
     # def test_three_in_order(self):
     #     """
