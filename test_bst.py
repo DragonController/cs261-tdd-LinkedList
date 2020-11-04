@@ -832,31 +832,31 @@ class TestBinarySearchTree(unittest.TestCase):
     # Mature, N-level trees.
     # """
 
-    # def test_insertions(self):
-    #     """
-    #          10                   10                      10
-    #        /    \               /    \                  /    \
-    #       5      15      =>    5      15         =>    5      15
-    #      / \    /  \          / \    /  \             / \    /  \
-    #     2   7  12   17       2   7  12   17          2   7  12   30
-    #                                     /  \                    /  \
-    #                                    16  45                 16   45
-    #                                       /  \                       \
-    #                                      30   99                     99
-    #     """
-    #     bst = three_level_tree()
-    #     bst.insert(BinarySearchTree(45))
-    #     bst.insert(BinarySearchTree(16))
-    #     bst.insert(BinarySearchTree(30))
-    #     bst.insert(BinarySearchTree(99))
-    #     self.assertEqual(45, bst.right.right.right.key)
-    #     self.assertEqual(99, bst.right.right.right.right.key)
-    #     bst.delete(17)
-    #     self.assertEqual(30, bst.right.right.key)
-    #     self.assertEqual(16, bst.right.right.left.key)
-    #     self.assertEqual(45, bst.right.right.right.key)
-    #     self.assertEqual(99, bst.right.right.right.right.key)
-    #     self.assertIsNone(bst.right.right.right.left)
+    def test_insertions(self):
+        """
+             10                   10                      10
+           /    \               /    \                  /    \
+          5      15      =>    5      15         =>    5      15
+         / \    /  \          / \    /  \             / \    /  \
+        2   7  12   17       2   7  12   17          2   7  12   30
+                                        /  \                    /  \
+                                       16  45                 16   45
+                                          /  \                       \
+                                         30   99                     99
+        """
+        bst = three_level_tree()
+        bst.insert(BinarySearchTree(45))
+        bst.insert(BinarySearchTree(16))
+        bst.insert(BinarySearchTree(30))
+        bst.insert(BinarySearchTree(99))
+        self.assertEqual(45, bst.right.right.right.key)
+        self.assertEqual(99, bst.right.right.right.right.key)
+        bst.delete(17)
+        self.assertEqual(30, bst.right.right.key)
+        self.assertEqual(16, bst.right.right.left.key)
+        self.assertEqual(45, bst.right.right.right.key)
+        self.assertEqual(99, bst.right.right.right.right.key)
+        self.assertIsNone(bst.right.right.right.left)
 
     # """
     # Traversals
