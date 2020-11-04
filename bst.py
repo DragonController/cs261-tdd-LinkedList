@@ -38,6 +38,12 @@ class BinarySearchTree:
 
     def delete(self, key):
         if self.key == key:
+            if self.right != None:
+                self.right.insert(left)
+                return self.right
+            if self.left != None:
+                self.left.insert(right)
+                return self.left
             return None
         if self.left != None and self.left.key == key:
             self.left = None
