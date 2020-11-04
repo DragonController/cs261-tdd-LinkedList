@@ -206,16 +206,16 @@ class TestBinarySearchTree(unittest.TestCase):
         self.assertEqual(bst.right, child.parent)
         self.assertEqual(bst,child.parent.parent)
 
-    # def test_search_two_basics(self):
-    #     """
-    #     Searching a two-level tree for a key that doesn't exist returns None.
-    #     """
-    #     bst = BinarySearchTree(5)
-    #     bstLeft = BinarySearchTree(3)
-    #     bst.insert(bstLeft)
-    #     bstRight = BinarySearchTree(7)
-    #     bst.insert(bstRight)
-    #     self.assertIsNone(bst.search(-999))
+    def test_search_two_basics(self):
+        """
+        Searching a two-level tree for a key that doesn't exist returns None.
+        """
+        bst = BinarySearchTree(5)
+        bstLeft = BinarySearchTree(3)
+        bst.insert(bstLeft)
+        bstRight = BinarySearchTree(7)
+        bst.insert(bstRight)
+        self.assertIsNone(bst.search(-999))
 
     # def test_search_two_root(self):
     #     """

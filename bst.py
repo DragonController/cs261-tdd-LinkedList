@@ -30,6 +30,10 @@ class BinarySearchTree:
     def search(self, key):
         if self.key == key:
             return self
+        if self.key > key and self.left != None:
+            return self.left.search(key)
+        if self.key < key and self.right != None:
+            return self.right.search(key)
         return None
 
     def delete(self, key):
