@@ -580,12 +580,12 @@ class TestBinarySearchTree(unittest.TestCase):
     # Before proper deletions, let's add some convenience methods.
     # """
 
-    # def test_is_leaf(self):
-    #     """
-    #     A node without children is a leaf node.
-    #     """
-    #     bst = BinarySearchTree(10)
-    #     self.assertTrue(bst.is_leaf())
+    def test_is_leaf(self):
+        """
+        A node without children is a leaf node.
+        """
+        bst = BinarySearchTree(10)
+        self.assertTrue(bst.is_leaf())
 
     # def test_with_left_child_is_not_leaf(self):
     #     """
