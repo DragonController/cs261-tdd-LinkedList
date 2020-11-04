@@ -560,13 +560,13 @@ class TestBinarySearchTree(unittest.TestCase):
         bst = three_level_tree()
         self.assertEqual(bst.left.right, bst.search(7))
 
-    # def test_search_three_inner_right(self):
-    #     """
-    #     Searching a three-level tree for a key that exists in the inner right leaf
-    #     returns that inner right leaf.
-    #     """
-    #     bst = three_level_tree()
-    #     self.assertEqual(bst.right.left, bst.search(12))
+    def test_search_three_inner_right(self):
+        """
+        Searching a three-level tree for a key that exists in the inner right leaf
+        returns that inner right leaf.
+        """
+        bst = three_level_tree()
+        self.assertEqual(bst.right.left, bst.search(12))
 
     # def test_search_three_outer_right(self):
     #     """
