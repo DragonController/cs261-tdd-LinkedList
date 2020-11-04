@@ -543,14 +543,14 @@ class TestBinarySearchTree(unittest.TestCase):
         bst = three_level_tree()
         self.assertEqual(bst, bst.search(10))
 
-    # def test_search_three_outer_left(self):
-    #     """
-    #     Searching a three-level tree for a key that exists in the leftmost leaf
-    #     returns that leftmost leaf.
-    #     Hint: Be recursive.
-    #     """
-    #     bst = three_level_tree()
-    #     self.assertEqual(bst.left.left, bst.search(2))
+    def test_search_three_outer_left(self):
+        """
+        Searching a three-level tree for a key that exists in the leftmost leaf
+        returns that leftmost leaf.
+        Hint: Be recursive.
+        """
+        bst = three_level_tree()
+        self.assertEqual(bst.left.left, bst.search(2))
 
     # def test_search_three_inner_left(self):
     #     """
