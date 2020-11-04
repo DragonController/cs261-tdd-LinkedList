@@ -43,8 +43,6 @@ class BinarySearchTree:
                     self.right.insert(self.left)
                 return self.right
             if self.left != None:
-                if self.right != None:
-                    self.left.insert(self.right)
                 return self.left
             return None
         if self.left != None and self.left.key == key:
