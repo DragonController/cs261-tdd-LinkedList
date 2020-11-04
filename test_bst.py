@@ -99,13 +99,13 @@ class TestBinarySearchTree(unittest.TestCase):
         bst = BinarySearchTree(5)
         self.assertEqual(bst, bst.search(5))
 
-    # def test_delete_single_nonexistent(self):
-    #     """
-    #     Deleting a node with a key that does not exist returns the root node of
-    #     the single-level tree.
-    #     """
-    #     bst = BinarySearchTree(5)
-    #     self.assertEqual(bst, bst.delete(-999))
+    def test_delete_single_nonexistent(self):
+        """
+        Deleting a node with a key that does not exist returns the root node of
+        the single-level tree.
+        """
+        bst = BinarySearchTree(5)
+        self.assertEqual(bst, bst.delete(-999))
 
     # def test_delete_single(self):
     #     """
